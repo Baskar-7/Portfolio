@@ -45,20 +45,26 @@ body{
   }
 
 
-// @media screen and (max-width:100vw) {
-//     .portfolio{
-//         width: 100%;
-//     }
-// }
+  @media screen and (max-width: 992px) {
+    .portfolio {
+        height: 99vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio {
+        max-width: 300vw;
+        min-width:  250vw;
+        max-height: 300vh;
+    }
+  }
 
 .portfolio
 {
-    max-width: 300vw;
-    min-width:  200vw;
+    height: 90%;
     padding: 0px;
     color: white;
-    max-height: 300vh;
-    min-height: 200vh;
     overflow: scroll;
 
  
