@@ -57,14 +57,14 @@ export default class IndexController extends Controller {
     
     $.ajax({
         type: 'POST',
-        url: 'https://api.twilio.com/2010-04-01/Accounts/'+ env.TWILIO_ACCOUNT_SID+'/Messages.json',
+        url: 'https://api.twilio.com/2010-04-01/Accounts/'+ process.env.TWILIO_ACCOUNT_SID+'/Messages.json',
         data: {
             "To": '+919080740652',
             "From": "12176154006",
             "Body":  values
         },
         headers: {
-            'Authorization': 'Basic ' + btoa( env.TWILIO_ACCOUNT_SID+':'+ env.TWILIO_AUTH_TOKEN)
+            'Authorization': 'Basic ' + btoa( process.env.TWILIO_ACCOUNT_SID+':'+ process.env.TWILIO_AUTH_TOKEN)
         },
         success: function(data) {
             var data={
